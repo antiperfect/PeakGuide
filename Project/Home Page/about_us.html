@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+
+    <title>PeakGuide/About Us</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .logo img {
+               height: 80px;
+        }    
+
+        body::before {
+            content: '';
+            background: url(/Project/Images/typing.gif) no-repeat center center fixed; /* Image URL */
+            background-size: cover; /* Ensure the image covers the entire background */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place the image behind the content */
+         }
+  
+         .content {
+            color: white; /* Ensures the content is readable */
+            padding: 20px;
+            text-align: center;
+         }
+
+         header {
+            background-color: #fff;
+            padding: 10px 20px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+         .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #555;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-left: 100px;
+        }
+    
+    
+
+        nav ul li {
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #52a3d8;
+            color: #ffffff;
+            transform: translateY(-3px);
+        }     
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #1a1919;
+        }
+
+        p {
+            color: #161616;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .about {
+            display: flex;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 20px;
+            border-radius: 8px;
+            margin-top: 60px;
+            margin-bottom: 50px;
+            opacity: 0.75;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #f5f5dc 
+        }
+
+        .about-content {
+            width: 50%;
+        }
+
+        .about-image {
+            width: 50%;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .meet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.75;
+            gap: 20px;
+            background-color:  #f5f5dc;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-bottom: 50px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .meet-content {
+            width: 50%;
+        }
+
+        .meet-image {
+            width: 50%;
+        }
+
+        .meet-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .meet-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .meet-list li {
+            margin-bottom: 10px;
+        }
+
+        .meet-list li::before {
+            content: '✔ ';
+            color: #4CAF50;
+        }
+
+        .quote {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .community {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .community-item {
+            width: 25%;
+        }
+
+        .community-item h3 {
+            margin-top: 0;
+        }
+
+        .community-item p {
+            margin-bottom: 0;
+        }
+
+        .how {
+            background-color: #b5c5c4;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .how-steps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .how-step {
+            width: 25%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .how-step h3 {
+            margin-top: 0;
+        }
+
+        .how-step p {
+            margin-bottom: 0;
+        }
+
+        .say {
+            background-color: #f5f5dc;
+            opacity: 0.75;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: fadeInDown 1s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .say-content {
+            width: 50%;
+            opacity:2;
+        }
+
+        .say-image {
+            width: 50%;
+            opacity: 1;
+        }
+
+        .say-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            opacity: 1;
+        }
+
+        .form {
+            background-color: #f5f5dc;
+            opacity: 0.75;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .form-field {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-input {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-left: -10px;
+            
+        }
+        .firstn{
+            margin-left: -690px;
+        }
+        .lastn{
+            margin-left: -690px;
+        }
+        .form-input1{
+            width: 47%;
+            padding: 10px;
+            border: 1px solid hsl(0, 0%, 80%);
+            border-radius: 5px;
+        }
+        .emailin{
+            margin-right: 35px;
+            margin-left: -500px;
+        }
+        .form-input2{
+            width: 20%;
+            padding: 10px;
+            border: 1px solid hsl(0, 0%, 80%);
+            border-radius: 5px;
+
+        }
+        .phonein{
+            margin-right: 25px;
+            margin-left: -810px;
+        }
+        .feed{
+            margin-left: -115px;
+            
+        }
+        .feedin{
+            width: 80%;
+            padding: 10px;
+            border: 1px solid hsl(0, 0%, 80%);
+            border-radius: 5px;
+
+
+        }
+
+        .form-button {
+            padding: 10px 20px;
+            background-color: #03599b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/Project/Images/Logo2.png" alt="Logo">
+            <h1>PeakGuide</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="about">
+            <div class="about-content">
+                <h1>About Us</h1>
+                <p>At PeakGuide, we help you navigate the journey to professional success and financial growth. Whether you're a beginner, a mid-level professional, or someone looking to switch careers, we provide a clear, actionable roadmap to help you reach your desired LPA (Lakh Per Annum) goal.</p>
+                <button class="form-button">Contact Us</button>
+            </div>
+            <div class="about-image">
+                <img src="/Project/Images/depositphotos_89951106-stock-photo-reaching-top-of-success.jpg" alt="About image">
+            </div>
+        </section>
+
+        <section class="meet">
+            <div class="meet-image">
+                <img src="/Project/Images/digital-transformation-3.jpg" alt="Nutritionist image">
+            </div>
+            <div class="meet-content">
+                <h2>Why Careerup</h2>
+                <p>We believe that with the right roadmap, anyone can achieve their career goals. PeakGuide is your trusted partner in this journey, combining actionable insights, personalized guidance, and the best resources available to help you succeed..</p>
+                
+            </div>
+            
+        </section>
+
+        
+        
+
+        <section class="say">
+            <div class="say-content">
+                <h2>Hello, Future Achiever!</h2>
+                <p>We're thrilled to have you here at PeakGuide, where your success is our priority! Your career journey is important to us, and we'd love to hear how we can make it even better.</p>
+            </div>
+            <div class="say-image">
+                <img src="/Project/Images/hello.jpg" alt="Say hello image">
+            </div>
+        </section>
+
+        <section class="form">
+            <form>
+                <div class="form-field">
+                    <label for="first-name" class="firstn">First Name:</label>
+                    <input type="text" id="first-name" class="form-input">
+                </div>
+                <div class="form-field">
+                    <label for="last-name" class="lastn">Last Name:</label>
+                    <input type="text" id="last-name" class="form-input">
+                </div>
+                <div class="form-field">
+                    <label for="email" class="emailin">Email:</label>
+                    <input type="email" id="email" class="form-input1">
+                </div>
+                <div class="form-field">
+                    <label for="phone" class="phonein">Phone:</label>
+                    <input type="tel" id="phone" class="form-input2">
+                </div>
+                <div class="form-field">
+                    <label for="message" class="feed">Feedback:</label>
+                    <textarea id="message" placeholder="We appreciate your feedback" class="feedin"></textarea>
+                </div>
+                <button type="submit" class="form-button">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeakGuide</title>
+    <link rel="stylesheet" href="home_page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/Project/Images/Logo2.png" alt="Logo">
+                <a href="#home" class="logoh">PeakGuide</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home_page.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login_page.html">Login</a>
+                <a href="login_page.html" class="signup">Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img src="/Project/Images/depositphotos_89951106-stock-photo-reaching-top-of-success.jpg" alt="Banner 1">
+                    <div class="banner-content">
+                        <h1>Shape Your Future with PeakGuide</h1>
+                        <p>Your personalized roadmap to success!</p>
+                        <div class="banner-buttons">
+                            <a href="about_us.html" class="btn-primary">Explore Services</a>
+                            <a href="contact.html" class="btn-secondary">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="/Project/Images/img8.png" alt="Banner 2">
+                    <div class="banner-content">
+                        <h1>Discover the Best Career Paths</h1>
+                        <p>Guiding you to your peak potential.</p>
+                        <div class="banner-buttons">
+                            <a href="about_us.html" class="btn-primary">Explore Services</a>
+                            <a href="contact.html" class="btn-secondary">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <img src="/Project/Images/1722509472094.png" alt="Banner 3">
+                    <div class="banner-content">
+                        <h1>Your Career, Your Way</h1>
+                        <p>Personalized plans that fit your needs.</p>
+                        <div class="banner-buttons">
+                            <a href="about_us.html" class="btn-primary">Explore Services</a>
+                            <a href="contact.html" class="btn-secondary">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="product-grid">
+        <div class="product-items">
+            <div class="product-item">
+                <a href="https://dictionary.cambridge.org/dictionary/english/career">
+                    <img src="/Project/Images/img6.jpg">
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <img src="/Project/Images/img2.jpg" alt="Career Path">
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <img src="/Project/Images/img3.jpg" alt="Roadmap">
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <img src="/Project/Images/img4.jpg" alt="Digital Transformation">
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <img src="/Project/Images/img5.jpg" alt="Digital Transformation">
+                </a>
+            </div>
+            <!-- Duplicate items to make the loop effect more seamless -->
+            <div class="product-item">
+                <a href="#">
+                    <img src="/Project/Images/img1.jpg" alt="Career Advancement">
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <img src="/Project/Images/Img7.png" alt="Career Advancement">
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <img src="/Project/Images/img8.png" alt="Career Advancement">
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <img src="/Project/Images/img9.png" alt="Career Advancement">
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <img src="/Project/Images/img10.png" alt="Career Advancement">
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="#">
+                    <img src="/Project/Images/clarity.jpg" alt="Career Path">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PeakGuide. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="home_page"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 15000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+</body>
+</html>

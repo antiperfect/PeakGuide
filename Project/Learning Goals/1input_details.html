@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Roadmap</title>
+    <link rel="stylesheet" href="1input_details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h1>Career Roadmap Planner</h1>
+        <form id="careerForm">
+            <div class="form-group">
+                <label for="qualification">Qualification:</label>
+                <select id="qualification" name="qualification">
+                    <option value="highschool">High School</option>
+                    <option value="highschool_drop">Dropped-out before High School</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="learningGoals">Desired Learning Goals:</label>
+                <select id="learningGoals" name="learningGoals">
+                    <option value="programming">Tech(Programming)</option>
+                    <option value="dataAnalysis">Tech(Data Analysis)</option>
+                    <option value="digitalMarketing">Business(Digital Marketing)</option>
+                    <option value="graphicDesign">Software(Graphic Design)</option>
+                    <option value="psychology">Psychology</option>
+                    <option value="businessManagement">Business(Business Management)</option>
+                    <option value="machineLearning">Tech(Machine Learning)</option>
+                    <option value="artHistory">Arts(Art History)</option>
+                    <option value="musicTheory">Music(Music Theory)</option>
+                    <option value="actingt">Acting</option>
+                    <!-- Add more skills if needed -->
+                </select>
+            </div>
+            <button type="submit" class="btn">Get Roadmap</button>
+        </form>
+        <div id="roadmap" class="hidden">
+            <h2>Your Roadmap</h2>
+            <p id="roadmapText"></p>
+        </div>
+    </div>
+
+    <script src="1input_details.js"></script>
+</body>
+</html>

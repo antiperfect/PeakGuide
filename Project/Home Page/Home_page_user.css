@@ -1,0 +1,555 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.logo img {
+    height: 50px;
+   
+}
+
+.logo .logoh {
+    font-size: 26px;
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: -10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: -80PX;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #52a3d8;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.user {
+    position: relative;
+    cursor: pointer;
+}
+
+.user img {
+    border-radius: 50%;
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%; /* Position it right below the user icon */
+    right: 0; /* Align it to the right side */
+    background-color: white; /* Background color of the submenu */
+    width: 300px; /* Adjust the width as needed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    border-radius: 8px;
+    z-index: 1000; /* Ensure it appears above other elements */
+    display: none; /* Keep it hidden by default */
+    
+    
+}
+
+.user:hover .sub-menu-wrap {
+    display: block; /* Show the dropdown on hover */
+    
+   
+}
+
+.sub-menu {
+    padding: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3 {
+    font-weight: 400;
+    margin-left: 10px;
+    color: #333333;
+    
+}
+
+.user-info img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.sub-menu hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 15px 0;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.sub-menu-link:last-child {
+    border-bottom: none;
+}
+
+.sub-menu-link img {
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-link span {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+    font-weight: 600;
+}
+
+
+/* Other styles unchanged */
+
+
+
+.banner {
+    background-color: #d0e3f9;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    background-image: url(/Project/Images/depositphotos_89951106-stock-photo-reaching-top-of-success.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+    z-index: 0;
+}
+.banner h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #ece8e8;
+}
+
+.banner p {
+    font-size: 18px;
+    color: #b9e5f7;
+    margin-top: 10px;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #52a3d8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Product Grid styles */
+.product-grid {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.product-items {
+    display: flex;
+    animation: scroll 15s linear infinite;
+}
+
+.product-item {
+    flex-shrink: 0;
+    width: 250px; /* Adjust the width as needed */
+    margin-right: 20px;
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.product-item {
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.product-item p {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f0f4f8;
+}
+
+.product-item:hover img {
+    transform: scale(1.1) rotate(2deg); /* Zoom and slight rotation */
+    filter: brightness(1.2); /* Slightly increase brightness */
+}
+
+.product-item:hover p {
+    color: #0078D7; /* Change text color */
+}
+
+/* Add a glowing effect */
+.product-item:hover::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(0, 120, 215, 0.5);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.product-item:hover::before {
+    opacity: 1;
+}
+
+/* Footer styles */
+footer {
+    background-color: #f3f4f6;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
+/* Header and Footer Parallax Speed */
+header {
+    background: #ffffff;
+    position: relative;
+    z-index: 1;
+    animation: fadeInDown 1s ease-out;
+}
+
+footer {
+    background: #f7f8fa;
+    padding: 20px;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+footer a {
+    color: #0078D7;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+footer a:hover {
+    color: #005A9E;
+    border-bottom: 2px solid #005A9E;
+}
+/* Navigation Hover Effect */
+.nav-bar ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    color: #0078D7;
+    border-bottom: 2px solid #0078D7;
+}
+
+/* Banner and Illustration Parallax */
+.banner .text-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    animation: slideInUp 1.5s ease-out forwards;
+}
+
+.banner .illustration {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    animation: slideInRight 2s ease-out forwards;
+}
+
+/* CTA Button Hover Animation */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #0078D7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #005A9E;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer links hover effect */
+.footer-links a {
+    color: #0078D7;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #005A9E;
+    border-bottom: 2px solid #005A9E;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: modalFadeIn 0.5s forwards ease-in-out;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close:hover {
+    color: #bbb;
+    transform: rotate(90deg);
+}
+
+/* Parallax effect base */
+.parallax {
+    position: relative;
+    z-index: 1;
+}
+
+/* Keyframe animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Scroll Down Indicator */
+.scroll-indicator {
+    text-align: center;
+    margin-top: 20px;
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator span {
+    font-size: 24px;
+    color: #0078D7;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+.banner-content{
+    position: relative;
+    z-index: 2;
+}
+.cta-buttons a{
+    background-color:#007bff ;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: backgorund-color 0.3ease;
+}

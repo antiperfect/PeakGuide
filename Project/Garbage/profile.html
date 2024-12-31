@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-picture">
+                <img src="/Project/user-avatar.jpg" alt="User Avatar">
+            </div>
+            <div class="profile-info">
+                <h1>John Doe</h1>
+                <p>@johndoe</p>
+                <p>Email: johndoe@example.com</p>
+                <p>Member since: January 2023</p>
+                <button class="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+            </div>
+        </div>
+        <div class="profile-content">
+            <nav class="profile-nav">
+                <ul>
+                    <li><a href="#" class="active">Overview</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Achievements</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="profile-details">
+                <section class="profile-section">
+                    <h2>Overview</h2>
+                    <p>Welcome to your profile! Here you can manage your courses, track your achievements, and adjust your settings.</p>
+                    <h3>Recent Activity</h3>
+                    <ul class="activity-list">
+                        <li><i class="fas fa-book"></i> Enrolled in "Machine Learning Basics"</li>
+                        <li><i class="fas fa-trophy"></i> Completed "Python for Data Science" with Honors</li>
+                        <li><i class="fas fa-book-open"></i> Started "Advanced Web Development"</li>
+                    </ul>
+                </section>
+                <section class="profile-section">
+                    <h2>Achievements</h2>
+                    <div class="achievements">
+                        <div class="achievement">
+                            <i class="fas fa-medal"></i>
+                            <p>Completed 5 Courses</p>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-certificate"></i>
+                            <p>Certified in Python</p>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-trophy"></i>
+                            <p>Top 10% in AI Course</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

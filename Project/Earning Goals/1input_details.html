@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Roadmap</title>
+    <link rel="stylesheet" href="1input_details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="card">
+            <h1>Career Roadmap Planner</h1>
+           
+            <form id="careerForm">
+                <div class="form-group">
+                    <label for="qualification">Qualification:</label>
+                    <select id="qualification" name="qualification">
+                        <option value="highschool_maths">High School (Maths)</option>
+                        <option value="highschool_bio">High School (Bio)</option>
+                        <option value="highschool_commerce">High School (Commerce)</option>
+                        <option value="highschool_arts">High School (Arts)</option>
+                        <option value="highschool_drop">Dropped-out before High School</option>
+                        <option value="bachelor_tech">Bachelor's in Tech</option>
+                        <option value="bachelor_law">Bachelor's in Law</option>
+                        <option value="bachelor_busi">Bachelor's in Business</option>
+                        <option value="bachelor_med">Bachelor's in Medical</option>
+                        <option value="master_tech">Master's in Tech</option>
+                        <option value="master_law">Master's in Law</option>
+                        <option value="master_busi">Master's in Business</option>
+                        <option value="master_med">Master's in Medical</option>
+                        
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="careerField">Field of Interest:</label>
+                    <select id="careerField" name="careerField">
+                        <option value="business">Business</option>
+                        <option value="psychology">Psychology</option>
+                        <option value="art">Art</option>
+                        <option value="music">Music</option>
+                        <option value="acting">Acting</option>
+                    </select>
+                </div>
+                
+                <div class="form-salary">
+                    <label for="salary">Desired Earning Goals (₹):</label>
+                    <select id="salary" name="salary">
+                        
+                        <option value="600000">Upto 6LPA</option>
+                        <option value="800000">Upto 8LPA</option>
+                        <option value="1200000">Upto 12LPA</option>
+                        <option value="2000000">Upto 20LPA</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Get Roadmap</button>
+            </form>
+            <div id="roadmap" class="hidden">
+                <h2>Your Roadmap</h2>
+                <p id="roadmapText"></p>
+            </div>
+        </div>
+    <script src="1input_details.js"></script>
+</body>
+</html>
